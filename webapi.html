@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAPI</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Colour Variables -->
+    <style>
+        :root {
+            --navbar-color: #daf7a6;
+            --showcase-color: #000000;
+            --bio-color: #ffc300;
+            --webtech-color: #ec7063;
+            --competence-color: #9cda0d;
+            --statement-color: #f27a09;
+        }
+    </style>
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- Navigation Bar ; copied from example on Bootstrap -->
+    <div style="background-color: var(--navbar-color); height: 60px;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <!-- Home -->
+                <a class="navbar-brand" href="#index.html">
+                    <i class="bi bi-globe2"></i> ITWD6.408
+                </a>
+                
+                <!-- Search -->
+                <a id="navbar-search" class="translate-middle" data-bs-toggle="collapse" data-bs-target="#search">
+                    <i class="bi bi-search fs-3"></i>
+                </a>
+
+                <!-- Sandwhich toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse d-lg-flex justify-content-center p-1" id="navbarNavDropdown" style=" z-index: 1;">
+                    <ul class="navbar-nav float-end p-1" style="background-color: var(--navbar-color);">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms.html">Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="webapi.html">WebAPI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript.html">Javascript</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-research.html">Research</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <!-- Search Menu -->
+    <div class="collapse" id="search" style="background-color: var(--navbar-color);"">
+        <nav>
+            <div class="container-fluid p-2">
+                <form class="d-flex" role="search" method="get" action="http://www.google.com/search">
+                    <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Body -->
+    <main class="container-fluid" style="flex: 1;">
+
+        <!-- Accordian ; copied from example on Bootstrap -->
+        <div class="accordion row align-items-start g-2" id="webapiAccordian">
+
+            <!-- Accordian Headers -->
+            <div class="col-lg-2 p-1">
+                <div class="row">
+                    <div class="col-6 col-lg-12 p-1">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                JSON Rules
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="col-6 col-lg-12 p-1">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                WebAPI
+                            </button>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Accordian Bodies -->
+            <div class="col-lg-10">
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#webapiAccordian">
+                    <!-- JSON Rules -->
+                    <div class="accordion-body">
+                        <div class="p-2">
+                            <h3>JSON Rules</h3>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 1</h5>
+                                        Objects: Enclosed in curly braces {} and contain comma-separated key/value pairs.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 2</h5>
+                                        Keys: Must be strings enclosed in double quotes.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 3</h5>
+                                        Data: Must come in name/value pairs (e.g., "name": "Daniel").
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 4</h5>
+                                        Values: Can only be a string, number, object, array, boolean (true/false), or null. Functions and undefined are not allowed.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 5</h5>
+                                        Arrays: Enclosed in square brackets [] and contain an ordered list of values.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0; min-height: 90px;">
+                                        <h5>Rule 6</h5>
+                                        Trailing Commas: Not allowed at the end of a list or object.
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                    
+
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#webapiAccordian">
+                    <!-- WebAPI -->
+                    <div class="accordion-body">
+                        <div class="p-2">
+                            <h3>WebAPI</h3>
+
+                            <div class="container-fluid p-2">
+                                <form class="d-flex" role="search" method="get" name="search">
+                                    <input class="form-control me-2" type="text" name="q" id="query" placeholder="Search" aria-label="Search"/>
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+
+                            <div class="row" id="data"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="container-fluid" style="background-color: var(--navbar-color);">
+        <div class="row">
+            <!-- Social Media Links -->
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <i class="bi bi-linkedin p-1"></i>
+                <i class="bi bi-facebook p-1"></i>
+                <i class="bi bi-twitter p-1"></i>
+                <i class="bi bi-youtube p-1"></i>
+                <i class="bi bi-instagram p-1"></i>
+            </div>
+
+            <div class="col-6 col-md-4 p-1 d-flex justify-content-center">
+                Martyn Rolls
+            </div>
+
+            <!-- Privacy Policay ; modal box / button copied from example on Bootstrap -->
+            <div class="col-6 col-md-4 p-1 d-flex justify-content-center">
+                <!-- Button -->
+                <a data-bs-toggle="modal" data-bs-target="#privacyPolicy">
+                    Privacy Policy
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="privacyPolicy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Privacy Policy</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            This Privacy Policy outlines how we collect, store, and use your personal information. 
+                            <br>
+                            <strong>PERSONAL INFORMATION</strong>
+                            <br>
+                            Personal information has the same meaning as defined in the Privacy Act 1993. This can include any information that can be used to personally identify you.
+                            <br>
+                            <strong>TYPES OF PERSONAL INFORMATION COLLECTED</strong>
+                            <br>
+                            Types of personal information collected can include, but is not limited to Name, Address, Location, Email address, Telephone number, Age or date of birth, Profession.
+                            <br>
+                            <strong>HOW INFORMATION IS COLLECTED</strong>
+                            <br>
+
+                            By filling out and submitting any forms on this webpage, you agree that we may collect the information provided by you.
+                            <br>
+                            <strong>USE OF PERSONAL INFORMATION</strong>
+                            <br>
+
+                            The personal information collected from you will be used for research and study purposes, to better understand trends in society.
+                            <br>
+                            <strong>COOKIES</strong>
+                            <br>
+
+                            Our website uses cookies to enhance your browsing experience. You can disable cookies through your browser settings, but this may affect the functionality of our site.
+                            <br>
+                            <strong>USE OF PERSONAL INFORMATION FOR COMMUNICATION</strong>
+                            <br>
+
+                            By providing your email address, you agree to receive follow up emails, promotional or informational, from. You can opt out at any time through the unsubscribe link in the emails.
+                            <br>
+                            <strong>DISCLOSURE OF PERSONAL INFORMATION</strong>
+                            <br>
+
+                            We do not sell, trade, or otherwise transfer your personal information to outside parties, except when required by law or to provide services you requested.
+                            <br>
+                            <strong>PROTECTION OF PERSONAL INFORMATION</strong>
+                            <br>
+
+                            We take responsibility of your personal information seriosuly, and will ensure that the personal information we hold is protected from misuse, loss or unauthorised access.
+                            <br>
+                            <strong>YOUR RIGHTS TO ACCESS YOUR PERSONAL INFORMATION</strong>
+                            <br>
+
+                            You have the right to access, correct, or delete your personal information. You can request this by contacting us through the details provided on our website.
+                            <br>
+                            <strong>CHANGES TO THIS POLICY</strong>
+                            <br>
+
+                            We reserve the right to update or modify this Privacy Policy at any time. Changes will be posted on this page with an updated effective date.
+                            <br>
+                            <strong>CONTACT INFORMATION</strong>
+                            <br>
+
+                            If you have any questions or concerns regarding this Privacy Policy, please contact us at ddang@eit.ac.nz.
+
+                            Last modified: Thursday, 30 July 2026, 10:19 PM
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script type="module">
+    //--------------------------------------------------------
+    // Supabase API Endpoint: data API URL and supabaseKey
+    //--------------------------------------------------------
+    //Replace with your Supabase data API URL: RESTful endpoint
+    const supabaseApiUrl = 'https://pwvejbzjwhsswkrzciqk.supabase.co/rest/v1/';
+    //Replace with your Supabase publishable key
+    const supabaseKey = 'sb_publishable_WsyyycYI8XM-Yo3XjIQqjg_xT4eXmhU';
+    //------------------------------------------------------------------------------------
+    //Using the Fetch API
+    //------------------------------------------------------------------------------------
+    
+    //The Fetch API allows you to make HTTP requests directly to the Supabase RESTful endpoints
+    //If you want to interact with the /rest/v1/ endpoint explicitly via raw HTTP,
+    // you can pass your credentials through the request "headers" or "query parameters".
+    async function fetchDataRaw() {
+        // Syntax structures query filters directly into URL params,
+        // this query translates to: "SELECT fname, lname, gender FROM mobiletechnologyform "
+        const url = `${supabaseApiUrl}survey_data?select=fname,lname,address_line_1,address_line_2,town_city,gender,phone_type,phone_provider,comment`;
+        try {
+            //Make a GET request to the Supabase RESTful endpoint with the appropriate headers
+            const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'apikey': supabaseKey,
+                'Authorization': `Bearer ${supabaseKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        //Check if the response is not OK (status code not in the range 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        //Parse the JSON response and log the user data to the console
+        const data = await response.json();
+        console.log('Data:', data);
+        return data;
+        } catch (error) {
+            console.error('Fetch error:', error);
+            alert('Error Fetching Data');
+            return [];
+        }
+    }
+    //Javascript Async Promise: handle the return Promise
+    let rawData = await fetchDataRaw()
+
+    const displayData = (data) => {
+        // Get the HTML element where the data will be displayed
+        const outputElement = document.getElementById('data');
+        // Clear current selection
+        outputElement.innerHTML = ``
+        //Debug: Log the fetched data as a formatted JSON string in the output element
+        console.log(JSON.stringify(data, null, 2));
+        //Loop through the data and display each record in a formatted way
+        data.forEach(record => {
+            // Create a new div element for each record
+            const recordElement = document.createElement('div');
+            recordElement.classList.add('col-lg-6');
+
+            recordElement.innerHTML = `
+            <div class="my-2 mx-1 p-1" style="background-color: #f0f0f0;">
+                <p><b>Firstname:</b> ${record.fname}</p>
+                <p><b>Lastname:</b> ${record.lname}</p>
+                <p><b>Address Line 1:</b> ${record.address_line_1}</p>
+                <p><b>Address Line 2:</b> ${record.address_line_2}</p>
+                <p><b>Town/City:</b> ${record.town_city}</p>
+                <p><b>Gender:</b> ${record.gender}</p>
+                <p><b>Phone Type:</b> ${record.phone_type}</p>
+                <p><b>Phone Provider:</b> ${record.phone_provider}</p>
+                <p><b>Comment:</b> ${record.comment}</p>
+            </div>
+            `;
+            // Append the record element to the output element
+            outputElement.appendChild(recordElement);
+        });
+    };
+
+    displayData(rawData);
+
+
+    // Search Bar
+    const search = document.forms['search'];
+    search.addEventListener('submit', async(e) => {
+        //Prevent the default form submission behavior
+        e.preventDefault();
+
+        data = filterValues();
+        displayData(data);
+    });
+
+    const filterValues = () => {
+	    let keyword = document.getElementById("query").value.toLowerCase();
+
+        let filtered = rawData.filter(element =>
+            Object.values(element).some(value =>
+                String(value).toLowerCase().includes(keyword)
+            )
+        );
+
+        console.log(filtered)
+        return filtered
+    };
+
+    </script>
+
+</body></html>
