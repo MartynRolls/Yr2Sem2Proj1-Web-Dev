@@ -1,40 +1,25 @@
 export const copyright_data = {
     front: `
 <h2>Copyright Law in New Zealand</h2>
-<img src="Images/Copyright-Logo.png" alt="Copyright Symbol" style="height:60%;">
+<img src="Images/Copyright-Logo.png" alt="Copyright Symbol" style="max-height:60%;max-width:90%;">
     `,
 
     back: `
-<h2>Governing legislation</h2>
-<p>Copyright protection in New Zealand is provided for under the Copyright Act 1994 and the Copyright Regulations 1995, which allow copyright owners to control certain activities relating to the use and dissemination of their works, and provide for border protection measures and both civil and criminal infringement penalties. It is administered by the Ministry of Business, Innovation and Employment (MBIE).</p>
+<h3>Copyright basics</h3>
+<p>Copyright is an automatic legal right granted to the creator of an original work (text, images, code, music, etc.) as soon as it is fixed in a tangible form. It gives the creator exclusive rights to reproduce, distribute, adapt, and publicly display the work. Registration is not required in most jurisdictions, including New Zealand.</p>
  
-<h2>How protection arises</h2>
-<p>Copyright applies automatically to original literary, dramatic, musical, and artistic works, sound recordings, films, communication works, and the typographical arrangement of published editions. There is no registration system.</p>
+<h3>The four core types of Creative Commons licenses (building blocks)</h3>
+<ul>
+  <li><strong>BY (Attribution)</strong> – others may use the work if they credit the creator.</li>
+  <li><strong>SA (ShareAlike)</strong> – derivative works must be shared under the same license.</li>
+  <li><strong>NC (NonCommercial)</strong> – use is restricted to non-commercial purposes.</li>
+  <li><strong>ND (NoDerivatives)</strong> – the work may be shared but not modified.</li>
+</ul>
+<p>These four elements combine into six standard licenses (e.g. CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA, CC BY-ND, CC BY-NC-ND), plus CC0 for public domain dedication.</p>
  
-<h2>Duration</h2>
-<p>In most cases, copyright lasts for the life of the author plus 50 years, though the exact term depends on the category of work.</p>
-<div class="note">
-<strong>Change coming:</strong> A Copyright (Parody and Satire) Amendment Bill is currently before Select Committee, due to report back by 1 October 2026. Separately, amendments required under New Zealand's free trade agreements with the EU and UK will extend the standard copyright term from 50 to 70 years for most work categories; these must be enacted by 1 May 2028 (EU) and 31 May 2028 (UK). Cabinet has also asked for a report by 31 March 2027 on a possible framework for copyright and generative AI. None of this has taken effect yet — it's all proposed or in progress.
-</div>
- 
-<h2>Exclusive rights and infringement</h2>
-<p>The Act gives the copyright owner the exclusive right to exploit the economic value of a work. Infringement occurs when someone performs a "restricted act" — such as copying the work — in relation to the whole work or a substantial part of it, without a licence.</p>
- 
-<h2>AI-generated works</h2>
-<p>Unlike US law, New Zealand's Act allows copyright to subsist in a "computer-generated" work with no human author. In that case, the author is deemed to be the person who made the arrangements necessary for the work's creation. Such works are protected for 50 years from the year of creation.</p>
- 
-<h2>International context</h2>
-<p>New Zealand is party to international agreements including TRIPS, the Berne Convention, and the Universal Copyright Convention.</p>
- 
-<h2>Quick reference</h2>
-<table>
-<tr><th>Aspect</th><th>Current position</th></tr>
-<tr><td>Governing Act</td><td>Copyright Act 1994 (+ Regulations 1995)</td></tr>
-<tr><td>Registration required?</td><td>No — automatic on creation</td></tr>
-<tr><td>Standard term</td><td>Life of author + 50 years</td></tr>
-<tr><td>Computer-generated works</td><td>50 years from creation; author = person who arranged its creation</td></tr>
-<tr><td>Pending change</td><td>Term extension to 70 years by 2028 (not yet law)</td></tr>
-</table>
-
+<h3>Fair use / fair dealing in NZ law</h3>
+<p>New Zealand does not have a broad "fair use" doctrine like the US. Instead, the Copyright Act 1994 provides narrower "fair dealing" exceptions for specific purposes: research or private study, criticism or review, and news reporting. Use outside these categories generally requires permission from the copyright holder.</p>
+<h3>How this applies to my Project 1</h3>
+<p>A potential copyright issue with my website could be images/logos used and downloaded from online. Because the website in it's current state is only intended for education purposes, it would likely fall under fair dealing. If I wanted to keep the website published after marking, say as a part of my portfolio, I would need to ensure all external content is properly attributed and credited. The copyright license that would best suit my Project 1 website I believe would be CC BY-ND because it would be used as a portfolio piece, and so I would want to be properly credited for what I've created, and and I wouldn't want anyone to modify the work, as that would misrepresent my capabilities and skills.
     `
 }
